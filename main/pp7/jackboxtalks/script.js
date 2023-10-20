@@ -8050,7 +8050,7 @@ const yl = class {
         return e.replace(/[^\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491A-Z0-9\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(e) {
-        return e.replace(/[^\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491\u00A1\u0020-\u007E\u00BF-\u00FFпїЅ]/gi, "")
+        return e.replace(/[^\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491\u0410-\u044F\u0451\u0401\u0407\u0457\u0406\u0456\u0404\u0454\u0490\u0491\u00A1\u0020-\u007E\u00BF-\u00FF’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -12585,6 +12585,7 @@ class oi {
                 TV_SENTRY_RATE: "0.2",
                 TV_SLACK_DEBUG: "https://hooks.slack.com/services/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",
                 TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
+                BASE_URL: "https://bundles.jackbox.tv/tdot/pp7-jackboxtalks/",
                 MODE: "production",
                 DEV: !1,
                 PROD: !0
@@ -13162,7 +13163,7 @@ const vC = `<form>\r
         <div class="inputGroup">\r
             <textarea id="input-text-textarea" rows="1" class="form-control jbg-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>\r
             <span class="inlineSubmit">\r
-                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span></button>\r
+                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Отправить</span></button>\r
             </span>\r
             <span id="helpBlock2" class="help-block errorText"></span>\r
             <div class="charCountDisplay"><span class="charRemaining">70</span></div>\r
@@ -13240,7 +13241,7 @@ const vC = `<form>\r
             ".inlineSubmitText": {
                 observe: "inlineSubmitText",
                 onGet(t) {
-                    return t !== void 0 ? t : "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+                    return t !== void 0 ? t : "Отправить"
                 }
             },
             ".form-group": {
@@ -15356,7 +15357,7 @@ class Ot {
         return e.customClass = {
             ...n,
             popup: "jbgModal"
-        }, e.titleText = e.titleText || "пїЅпїЅпїЅпїЅпїЅпїЅ", Sn.fire(e)
+        }, e.titleText = e.titleText || "Ошибка", Sn.fire(e)
     }
     static async showError(e) {
         const n = new URL("tdot/pp7/jackboxtalks/assets/8cdd50e7.png", self.location).href,
@@ -15364,7 +15365,7 @@ class Ot {
         return e.customClass = {
             ...i,
             popup: "jbgModal"
-        }, e.titleText = e.titleText || "пїЅпїЅпїЅпїЅпїЅпїЅ", n && (e.imageUrl = n), Sn.fire(e)
+        }, e.titleText = e.titleText || "Ошибка", n && (e.imageUrl = n), Sn.fire(e)
     }
     static async showCustom(e) {
         return Sn.fire(e)
@@ -15500,16 +15501,16 @@ const kC = `<div class="canvasContainer">\r
                     this.currentStream = i, this.video.srcObject = i, await this.video.play(), this.gotDevices(a)
                 } catch (i) {
                     console.error(i), Ot.show("alert", {
-                        titleText: "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-                        text: `пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ${t}`,
+                        titleText: "Не удается получить доступ к камере",
+                        text: `Похоже, у нас нет доступа к камере твоего устройства. Перезагрузи страницу и повтори попытку или выбери ${t}`,
                         willClose: () => {
                             this.cameraAccessDenied()
                         }
                     })
                 }
             } else Ot.show("alert", {
-                titleText: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-                text: `пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ${t}.`,
+                titleText: "Нет доступа к камере",
+                text: `Похоже, что доступ к камере недоступен из этого браузера. Вместо этого попробуй ${t}.`,
                 willClose: () => {
                     this.cameraAccessDenied()
                 }
@@ -16284,9 +16285,9 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         <div id="buttons" class="buttons"></div>\r
         <div id="post-sketchpad" class="post-sketchpad">\r
             <div id="submit">\r
-                <button id='submitdrawing' class="button submitDrawing">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button><br/>\r
+                <button id='submitdrawing' class="button submitDrawing">Отправить</button><br/>\r
             </div>\r
-            <button id='censorOptions' class='button'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>\r
+            <button id='censorOptions' class='button'>Параметры цензуры</button>\r
             <div class="footer"></div>\r
         </div>\r
         </div>\r
@@ -16320,9 +16321,9 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             disabled: !1,
             debug: !1,
             strings: {
-                drawing_empty: "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
-                submit: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-                ERROR_REJECTED_OBJECT: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!"
+                drawing_empty: "Надо что-то нарисовать!",
+                submit: "Отправить",
+                ERROR_REJECTED_OBJECT: "Это запрещено, нарисуй/введи что-нибудь ещё!"
             }
         }
     }),
@@ -16364,7 +16365,7 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 visible: !0,
                 updateView: !0,
                 onGet(t) {
-                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "Отправить"
                 }
             }
         },
@@ -16524,7 +16525,7 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         defaults: {
             state: "EnterSingleText",
             actions: [{
-                text: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+                text: "отправить",
                 action: "submit"
             }],
             allowEmpty: !1,
@@ -16541,11 +16542,11 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             autocapitalize: !1,
             className: "",
             inlineSubmit: !1,
-            inlineSubmitText: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+            inlineSubmitText: "Отправить",
             error: "",
             strings: {
-                ERROR_NOTHING_ENTERED: "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
-                ERROR_REJECTED_TEXT: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ."
+                ERROR_NOTHING_ENTERED: "Тебе нужно что-то написать!",
+                ERROR_REJECTED_TEXT: "Мне кажется, что тебе нельзя такое писать. Пожалуйста, будь уважителен к другим игрокам."
             }
         }
     }),
@@ -16615,7 +16616,7 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             }), this.inputComponent = this.inputComponent || new ds({
                 model: new Ke.Model({})
             }), this.buttonsCollection = this.buttonsCollection || new Ke.Collection([{
-                text: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+                text: "отправить"
             }]), this.buttonsComponent = this.buttonsComponent || new Un({
                 block: !0,
                 collection: this.buttonsCollection
@@ -16628,7 +16629,7 @@ const LC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             })), this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.inputComponent.model.set(this.model.attributes), this.buttonsComponent.options.block = this.model.get("block"), this.buttonsCollection.set(this.model.get("actions") || [{
-                text: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+                text: "отправить",
                 action: "submit"
             }]), this.model.get("entryId") && this.model.get("entryId") !== this.currentEntry && (this.inputComponent.clearInput(), this.currentEntry = this.model.get("entryId")), this.$el.find(".enterSingleTextFieldset").prop("disabled", !1), this.$el.find("textarea").focus(), this.stickit(), this.model.get("autoSubmit") && this.shouldSubmit && this.onChildviewInputSubmit()
         },
@@ -16771,7 +16772,7 @@ ft.View.extend({
     },
     showTwitchBroadcasterDialog(t) {
         let e = `<div class='icon-${this.client.roles.broadcaster.platform}'>${this.client.roles.broadcaster.name}</div>`;
-        e += "<div class='success'>пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Jackbox Audience Kit пїЅпїЅпїЅ Twitch.</div>", this.lacksAudience ? e += "<div class='warning'>пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>"), Ot.show("custom", {
+        e += "<div class='success'>Ты успешно подключил свою учётную запись к расширению Jackbox Audience Kit для Twitch.</div>", this.lacksAudience ? e += "<div class='warning'>В ЭТОЙ ИГРЕ НЕТ ЗРИТЕЛЕЙ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>В ЭТОЙ ИГРЕ ВЫКЛЮЧЕНЫ ЗРИТЕЛИ</div>"), Ot.show("custom", {
             html: e,
             position: "bottom",
             timer: t,
@@ -16810,8 +16811,8 @@ ft.View.extend({
     },
     onRoomWasDestroyed() {
         Zt.remove("roomCode"), Zt.remove("reconnect"), Ot.show("error", {
-            titleText: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-            text: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ!",
+            titleText: "Отключён",
+            text: "Спасибо за игру!",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16819,8 +16820,8 @@ ft.View.extend({
     },
     onDisconnected() {
         Ot.show("error", {
-            titleText: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-            text: "пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.",
+            titleText: "Отключён",
+            text: "Вы были отключены.",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16855,7 +16856,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
         <div id="characters" class="charactersContainer"></div>
     </div>
     <div id="artifactId" class="artifactContainer text">
-        <a id="artifactLink" aria-label="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" class="artifactLink" target="_blank">
+        <a id="artifactLink" aria-label="Посмотреть галерею" class="artifactLink" target="_blank">
             <button id="artifactButton" class="artifactButton"></button>
         </a>
     </div>
@@ -16889,28 +16890,28 @@ const zC = `<div id="controller" class="state-controller controller-content">
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-				wait: "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
-				vip_waiting: "пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				vip_canStart: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				vip_cancel: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ",
-				vip_postgame: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ?",
-                vip_episodes_menu: "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_unload: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_report: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_warning: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_load: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ id:",
-                vip_episodes_select: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:",
-                vip_episodes_back: "пїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_submit: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-                vip_episodes_view_author: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_start: "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ",
-				button_cancel: "пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_changename: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ",
-				button_sameplayers: "пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_newplayers: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				prompt_entername: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ",
-				prompt_choosecharacter: "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_censorOptions: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+				wait: "Сядь поудобнее и расслабься!",
+				vip_waiting: "Ждём, когда все игроки присоединятся",
+				vip_canStart: "Нажми эту кнопку, когда все присоединятся",
+				vip_cancel: "Нажми эту кнопку, чтобы отменить запуск игры",
+				vip_postgame: "Что теперь?",
+                vip_episodes_menu: "Меню эпизодов",
+                vip_episodes_unload: "Выгрузить эпизод",
+                vip_episodes_report: "Пожаловаться на эпизод",
+                vip_episodes_warning: "Предупреждение: пользовательский контент не проверяется",
+                vip_episodes_load: "Загрузить эпизод по id:",
+                vip_episodes_select: "Или выбрать эпизод из списка:",
+                vip_episodes_back: "Назад",
+                vip_episodes_submit: "Подтвердить",
+                vip_episodes_view_author: "Показать автора",
+				button_start: "Все здесь",
+				button_cancel: "Отмена",
+				button_changename: "Изменить имя",
+				button_sameplayers: "Те же игроки",
+				button_newplayers: "Новые игроки",
+				prompt_entername: "Введи своё имя",
+				prompt_choosecharacter: "Выбери своего персонажа",
+				button_censorOptions: "Параметры цензуры",
                 censor_prompt: ""
             }
         }
@@ -17135,7 +17136,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
                             inputAttributes: {
                                 maxlength: 12
                             },
-                            inputValidator: f => f ? f.length > 12 ? "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 12 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" : null : "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"
+                            inputValidator: f => f ? f.length > 12 ? "Максимум 12 символов" : null : "Тебе нужно что-нибудь написать!"
                         });
                         if (a.dismiss) return;
                         this.triggerMethod("client:message", {
@@ -17259,7 +17260,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
 <div id="message" class="message"><h2 class="messageText"></h2></div>
 <div id="action" class="action"></div>
 <div id="artifactId" class="artifactContainer text">
-    <a id="artifactLink" aria-label="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" class="artifactLink" target="_blank">
+    <a id="artifactLink" aria-label="Посетить галерею" class="artifactLink" target="_blank">
         <button id="artifactButton" class="artifactButton"></button>
     </a>
 </div>
@@ -17347,10 +17348,10 @@ const zC = `<div id="controller" class="state-controller controller-content">
             LANGUAGE_NAME: "English",
             SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
             SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
-            LANGUAGE: "пїЅпїЅпїЅпїЅ",
-            LOGIN: "пїЅпїЅпїЅпїЅпїЅ",
-            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-            STRING_ERROR_SERVER_ROOM_DESTROYED: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ!"
+            LANGUAGE: "Язык",
+            LOGIN: "Логин",
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Отключён",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Спасибо за игру!"
         },
         fr: {
             LANGUAGE_NAME: "Fran\xE7ais",
@@ -17470,10 +17471,10 @@ const zC = `<div id="controller" class="state-controller controller-content">
             announcePrompt: !1,
             countGroupName: null,
             strings: {
-                your_choice: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ",
-                censor_prompt: "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ?",
-                censor_confirm: "пїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
-                censor_cancel: "пїЅпїЅпїЅ!"
+                your_choice: "Спасибо. Свой выбор: ",
+                censor_prompt: "Убрать это?",
+                censor_confirm: "Да, уберите!",
+                censor_cancel: "Нет!"
             }
         }
     }),
@@ -17559,7 +17560,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
             this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.choicesList.options.block = this.model.get("block"), this.choicesList.collection.set(this.model.get("choices")), this.model.get("type") === "multiple" && qe.all(this.model.get("choices"), t => !t.disabled) && this.choicesList.collection.push({
-                text: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+                text: "Отправить",
                 action: "submit",
                 block: !1
             }), this.model.get("isAudience") && ((this.model.get("choiceId") === void 0 || this.model.get("choiceId") !== this.getOption("choiceId")) && (this.selected = [], this.audienceChoice = void 0, this.votesLeft = void 0), this.selected.length > 0 && (this.model.get("type") === "multiple" ? this.choicesList.children.forEach(t => {
@@ -17612,7 +17613,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
             })), !1
         },
         displayAudienceChoice(t) {
-            let e = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.";
+            let e = "Спасибо.";
             const n = t.map(a => {
                 const f = this.choicesList.children.find(v => v.model.get("index") === a);
                 return f ? f.model.get("html") || f.model.get("text") : ""
@@ -19081,10 +19082,10 @@ const _x = `<div id="controller" class="state-controller controller-content">\r
             doneText: {},
             announcePrompt: !1,
             strings: {
-                your_choice: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ",
-                censor_prompt: "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ?",
-                censor_confirm: "пїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
-                censor_cancel: "пїЅпїЅпїЅ!"
+                your_choice: "Спасибо. Твой выбор: ",
+                censor_prompt: "Убрать это?",
+                censor_confirm: "Да, уберите!",
+                censor_cancel: "Нет!"
             }
         }
     }),
@@ -19323,29 +19324,29 @@ const _x = `<div id="controller" class="state-controller controller-content">\r
             text: "",
             validActions: [],
             strings: {
-				tos_warning: "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				tos_warning_agree: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				tos_warning_back: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				create_new_episode: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				create_new_name_prompt: "пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.",
-				create_new_button: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_back_to_episodes: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_back_to_menu: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ",
-				previous_episodes: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:",
-				toggle_prompts_prompt: "пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_close: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_done: "пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_add: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				input_placeholder: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ",
-				label_hidden: "пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_edit: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_save: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_publish: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_play: "пїЅпїЅпїЅпїЅпїЅпїЅ",
-				button_delete: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
-				delete_warning: "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ?",
-				delete_warning_confirm: "пїЅпїЅ",
-				delete_warning_cancel: "пїЅпїЅпїЅ"
+				tos_warning: "Делясь контентом, ты соглашаешься с Условиями использования",
+				tos_warning_agree: "согласиться и поделиться",
+				tos_warning_back: "вернуться",
+				create_new_episode: "создать новый эпизод",
+				create_new_name_prompt: "перво-наперво введи название эпизода и нажми Создать.",
+				create_new_button: "создать",
+				button_back_to_episodes: "вернуться к эпизодам",
+				button_back_to_menu: "вернуться в меню",
+				previous_episodes: "предыдущие эпизоды:",
+				toggle_prompts_prompt: "нажми, чтобы показать/скрыть вопросы",
+				button_close: "закрыть",
+				button_done: "готово",
+				button_add: "добавить вопрос",
+				input_placeholder: "введи вопрос",
+				label_hidden: "скрыто",
+				button_edit: "редактировать",
+				button_save: "сохранить",
+				button_publish: "опубликовать",
+				button_play: "играть",
+				button_delete: "удалить",
+				delete_warning: "Ты точно хочешь удалить этот эпизод?",
+				delete_warning_confirm: "Да",
+				delete_warning_cancel: "Нет"
 }
         }
     }),
@@ -20421,8 +20422,8 @@ const Bx = ft.View.extend({
             </div>`;
         e += `
             <div class='success'>
-                пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Jackbox Audience Kit пїЅпїЅпїЅ Twitch.
-            </div>`, this.lacksAudience ? e += "<div class='warning'>пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>"), Ot.show("custom", {
+                Ты успешно подключил свою учётную запись к расширению Jackbox Audience Kit для Twitch.
+            </div>`, this.lacksAudience ? e += "<div class='warning'>В ЭТОЙ ИГРЕ НЕТ ЗРИТЕЛЕЙ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>В ЭТОЙ ИГРЕ ВЫКЛЮЧЕНЫ ЗРИТЕЛИ</div>"), Ot.show("custom", {
             html: e,
             position: "bottom",
             timer: t,
@@ -21179,9 +21180,9 @@ const zx = ft.View.extend({
         <div id="buttons" class="buttons"></div>
         <div id="post-sketchpad" class="post-sketchpad">
             <div id="submit">
-                <button id='submitdrawing' class="button submitDrawing">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button><br/>
+                <button id='submitdrawing' class="button submitDrawing">Подтвердить</button><br/>
             </div>
-            <button id='censorOptions' class='button'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+            <button id='censorOptions' class='button'>Параметры цензуры</button>
             <div class="footer"></div>
         </div>
         </div>
@@ -21229,7 +21230,7 @@ const zx = ft.View.extend({
         },
         sendInput(t) {
             if (this.sketchpadComponent.getLines().length === 0) {
-                Ot.show(Error("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"));
+                Ot.show(Error("Ты должен что-нибудь нарисовать!"));
                 return
             }
             Vn.prototype.sendInput.apply(this, [t])
@@ -21287,7 +21288,7 @@ const zx = ft.View.extend({
     </div>
     <div class="buttons post">
         <button id="cancelButton" class="button cancelButton" aria-label="Cancel"></button>
-        <button id="confirmButton" class="button confirmButton" aria-label="Confirm">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <button id="confirmButton" class="button confirmButton" aria-label="Confirm">ОСТАВИТЬ</button>
     </div>
 </div>
 <div style="display:none;">
@@ -21300,7 +21301,7 @@ const zx = ft.View.extend({
                 switchButton: "",
                 snapshotButton: "",
                 cancelButton: "",
-                confirmButton: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+                confirmButton: "ОСТАВИТЬ"
             }
         })
     }),
@@ -21402,7 +21403,7 @@ const zx = ft.View.extend({
             }), fs.prototype.initialize.apply(this, [t])
         },
         displayAudienceChoice(t) {
-            let e = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.";
+            let e = "Спасибо.";
             const n = t.map(a => {
                 const f = this.choicesList.children.find(v => v.model.get("index") === a);
                 return f ? f.model.get("name") || f.model.get("title") : ""
@@ -21490,12 +21491,12 @@ const zx = ft.View.extend({
             
         </div>
         <div class="add">
-            <button>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</button>
+            <button>Добавить слайд</button>
         </div>
     </div>    
 </div>
 <div class="submitRegion footer">
-    <button class="submit">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+    <button class="submit">ОТПРАВИТЬ</button>
 </div>`,
     c1 = Tn.extend({
         defaults: {
@@ -21693,7 +21694,7 @@ const d1 = Bx.extend({
             switchButton: "",
             snapshotButton: "",
             cancelButton: "",
-            confirmButton: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+            confirmButton: "ОСТАВИТЬ"
         })), t
     },
     getGameLayout(t) {
