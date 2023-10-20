@@ -20711,25 +20711,25 @@ var Xae = JM((koe, _1) => {
         }
     }
     const $4 = {
-            BACK: "Back",
-            CANCEL: "Cancel",
-            CLOSE: "Close",
-            CONFIRM: "Confirm",
-            CREATE: "Create",
-            DELETE: "Delete",
-            DONE: "Done",
-            EDIT: "Edit",
-            OK: "OK",
-            NEXT: "Next",
-            NO: "No",
-            PLAY: "Play",
-            PUBLISH: "Publish",
-            REMOVE: "Remove",
-            RESET: "Reset",
-            SUBMIT: "Submit",
-            TRY_AGAIN: "Try Again",
-            UNDO: "Undo",
-            YES: "Yes"
+            BACK: "Назад",
+            CANCEL: "Отмена",
+            CLOSE: "Закрыть",
+            CONFIRM: "Подтвердить",
+            CREATE: "Создать",
+            DELETE: "Удалить",
+            DONE: "Готово",
+            EDIT: "Редактировать",
+            OK: "ОК",
+            NEXT: "Дальше",
+            NO: "Нет",
+            PLAY: "Играть",
+            PUBLISH: "Опубликовать",
+            REMOVE: "Удалить",
+            RESET: "Сбросить",
+            SUBMIT: "Отправить",
+            TRY_AGAIN: "Попробуй ещё раз",
+            UNDO: "Отмена",
+            YES: "Да"
         },
         D4 = {
             UGC: {
@@ -20740,51 +20740,51 @@ var Xae = JM((koe, _1) => {
             }
         },
         k4 = {
-            DISCONNECTED: "You have been disconnected.",
-            DRAWING_NOTHING: "You have to draw something!",
-            PLAYER_KICKED: "You have been kicked from the game by a moderator.",
-            ROOM_DESTROYED: "Thanks for playing!",
-            ROOM_DISCONNECTED: "Disconnected",
-            TEXT_NAUGHTY: "I’m afraid you can’t write that. Please be respectful of other players.",
-            TEXT_NOTHING: "You can’t enter nothing!",
-            TITLE: "Error"
+            DISCONNECTED: "Подключение ушло за хлебом.",
+            DRAWING_NOTHING: "Ты должен что-то нарисовать!",
+            PLAYER_KICKED: "Ты забанен, я не буду тебя разбанивать.",
+            ROOM_DESTROYED: "Спасибо за игру!",
+            ROOM_DISCONNECTED: "Создатель комнаты ушёл пообедать",
+            TEXT_NAUGHTY: "Банворд пытаешся написать :)",
+            TEXT_NOTHING: "Напиши что-нибудь!",
+            TITLE: "Небольшие Технические Шоколадки"
         },
-        U4 = "LOADING",
+        U4 = "Загрузка",
         B4 = {
-            JOINED_COUNT: "{count} of {maxPlayers} players joined",
-            PLAYERS_NEEDED: "1 player needed to start | {count} players needed to start",
-            WAITING_FOR_VIP: "Waiting for {name} to start the game",
-            WAITING_FOR_GAMEPAD: "Waiting for the game to start",
-            GAME_STARTING: "Game is starting",
-            BUTTON_START: "Press to Start",
-            BUTTON_CANCEL: "Press to Cancel"
+            JOINED_COUNT: "{count} из {maxPlayers} игроков зашло.",
+            PLAYERS_NEEDED: "Не хватает 1 человека | {count} людей нужно для начала",
+            WAITING_FOR_VIP: "Ожидание когда {name} вернётся с обеда.",
+            WAITING_FOR_GAMEPAD: "Ожидание начала игры",
+            GAME_STARTING: "Игра начинаетсся",
+            BUTTON_START: "Начать",
+            BUTTON_CANCEL: "Отмена"
         },
         G4 = {
-            GALLERY_LINK: "Visit the Gallery",
-            PLAY_AGAIN: "Play again?",
-            BUTTON_SAME_PLAYERS: "Same Players",
-            BUTTON_NEW_PLAYERS: "New Players"
+            GALLERY_LINK: "Зайти в галлерею",
+            PLAY_AGAIN: "Сыграем снова?",
+            BUTTON_SAME_PLAYERS: "Те же игроки",
+            BUTTON_NEW_PLAYERS: "Другие игроки"
         },
         F4 = {
-            AND: "AND",
-            OR: "OR"
+            AND: "И",
+            OR: "ИЛИ"
         },
         W4 = {
-            BUTTON_SKIP: "Skip",
-            BUTTON_NEXT: "Next",
-            BUTTON_DONE: "Let’s Go!"
+            BUTTON_SKIP: "Пропустить",
+            BUTTON_NEXT: "Дальше",
+            BUTTON_DONE: "Готово!"
         },
         H4 = {
-            NAME: "AUDIENCE"
+            NAME: "ЗРИТЕЛИ"
         },
         j4 = {
-            EPISODE_REPORT: "Report Episode",
-            EPISODE_UNLOAD: "Unload Episode",
-            EPISODE_VIEW_AUTHOR: "View Author",
-            EPISODES_LOAD: "Load an episode by id:",
-            EPISODES_MENU: "Episodes Menu",
-            EPISODES_SELECT: "Or select an epsiode:",
-            EPISODES_WARNING: "Warning: user generated content is not rated",
+            EPISODE_REPORT: "Пожаловаться :(",
+            EPISODE_UNLOAD: "Выключить эпизод",
+            EPISODE_VIEW_AUTHOR: "Посмотреть автора",
+            EPISODES_LOAD: "Найти эпизод по id:",
+            EPISODES_MENU: "Меню эпизодов",
+            EPISODES_SELECT: "Выбрать эпизод:",
+            EPISODES_WARNING: "Внимание: Пользовательский контент не оценён",
             INSTRUCTION: {
                 CREATE_TITLE: "first things first, enter a name for the episode that will contain all your prompts and hit create.",
                 LOAD: "create or load?",
@@ -20798,10 +20798,10 @@ var Xae = JM((koe, _1) => {
                 TOS: "By sharing content, you agree to our [tos]Terms of Service[/tos]",
                 TOS_AGREE: "agree and share"
             },
-            BACK_TO_EPISODES: "back to episodes",
-            BACK_TO_MENU: "back to menu",
-            CREATE_NEW_EPISODE: "create a new episode",
-            PREVIOUS_EPISODES: "previous episodes",
+            BACK_TO_EPISODES: "Назад к эпизодам",
+            BACK_TO_MENU: "Назад в меню",
+            CREATE_NEW_EPISODE: "Создать эпизод",
+            PREVIOUS_EPISODES: "Предыдущие эпизоды",
             PROMPT_ADD: "add prompt",
             PROMPT_PLACEHOLDER: "enter a prompt",
             PROMPTS_COUNT_HIDDEN: "({count} hidden)",
@@ -20813,22 +20813,22 @@ var Xae = JM((koe, _1) => {
                 WARNING: "THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED"
             },
             RECONNECTED: {
-                TEXT: "RECONNECTED",
-                SUBTEXT: "Have fun!"
+                TEXT: "Инет вернулся с хлебом",
+                SUBTEXT: "Удачи!"
             },
             RECONNECTING: {
                 CONTROLLER: {
-                    TEXT: "CONNECTION INTERRUPTED",
-                    SUBTEXT: "Attempting to reconnect ({attempt} of 5)"
+                    TEXT: "ПОДКЛЮЧЕНИЕ ПРОВАЛИЛОСЬ В БЭКРУМС",
+                    SUBTEXT: "Попытка присоединится №({attempt} из 5)"
                 },
                 GAME: {
-                    TEXT: "GAME CONNECTION INTERRUPTED",
-                    SUBTEXT: "Please wait while we attempt to reconnect"
+                    TEXT: "ПОДКЛЮЧЕНИЕ ПРОВАЛИЛОСЬ В БЭКРУМС",
+                    SUBTEXT: "Пожалуйста дождитесь переприсоединения"
                 }
             },
             PAUSED: {
-                TEXT: "THE GAME IS PAUSED",
-                SUBTEXT: "Anything you submit will still be sent to the game."
+                TEXT: "ИГРА НА ПАУЗЕ",
+                SUBTEXT: "Всё что ты сделал будет отправленно в игру."
             }
         },
         q4 = {
